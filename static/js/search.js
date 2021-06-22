@@ -15,9 +15,12 @@ let fuseOptions = {
   minMatchCharLength: 3,
   keys: [
     {name:"title",weight:0.8},
+    {name:"reference_code",weight:0.8},
     {name:"tags",weight:0.5},
-    {name:"categories",weight:0.5},
-    {name:"contents",weight:0.4}
+    {name:"creators",weight:0.5},
+    {name:"venues",weight:0.5},
+    {name:"sources",weight:0.5},
+    {name:"contents",weight:0.3}
   ]
 };
 

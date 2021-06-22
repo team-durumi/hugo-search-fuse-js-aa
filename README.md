@@ -1,3 +1,9 @@
+# aa 프로젝트에서 재사용 가능한 search theme로 만듭니다.
+
+## 기본적인 indexing 변경 (item field 기준)
+
+
+
 
 # Hugo live search using Fuse.js and Mark.js
 
