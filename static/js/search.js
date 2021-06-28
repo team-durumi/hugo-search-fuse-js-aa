@@ -11,8 +11,8 @@ let fuseOptions = {
   threshold: 0.0,
   location: 0,
   distance: 100,
-  maxPatternLength: 64,
-  minMatchCharLength: 3,
+  maxPatternLength: 100,
+  minMatchCharLength: 2,
   keys: [
     {name:"title",weight:0.8},
     {name:"reference_code",weight:0.8},
@@ -20,6 +20,7 @@ let fuseOptions = {
     {name:"creators",weight:0.5},
     {name:"venues",weight:0.5},
     {name:"sources",weight:0.5},
+    {name:"subjects",weight:0.5},
     {name:"contents",weight:0.3}
   ]
 };
@@ -127,6 +128,30 @@ function populateResults(result){
     } else {
       frag.querySelector(".search_iftags").remove();
     }
+    let vs = value.item.creators;
+    if (creators) {
+      frag.querySelector(".search_creators").textContent = creators;
+    } else {
+      frag.querySelector(".search_ifcreators").remove();
+    }
+    let vs = value.item.venues;
+    if (venues) {
+      frag.querySelector(".search_venues").textContent = venues;
+    } else {
+      frag.querySelector(".search_ifvenues").remove();
+    }
+    let vs = value.item.sources;
+    if (sources) {
+      frag.querySelector(".search_sources").textContent = sources;
+    } else {
+      frag.querySelector(".search_ifsources").remove();
+    }
+    let vs = value.item.subjects;
+    if (subjects) {
+      frag.querySelector(".search_subjects").textContent = subjects;
+    } else {
+      frag.querySelector(".search_ifsubjects").remove();
+    }   
     let categories = value.item.categories;
     if (categories) {
       frag.querySelector(".search_categories").textContent = categories;
