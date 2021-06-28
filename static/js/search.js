@@ -128,25 +128,25 @@ function populateResults(result){
     } else {
       frag.querySelector(".search_iftags").remove();
     }
-    let vs = value.item.creators;
+    let creators = value.item.creators;
     if (creators) {
       frag.querySelector(".search_creators").textContent = creators;
     } else {
       frag.querySelector(".search_ifcreators").remove();
     }
-    let vs = value.item.venues;
+    let venues = value.item.venues;
     if (venues) {
       frag.querySelector(".search_venues").textContent = venues;
     } else {
       frag.querySelector(".search_ifvenues").remove();
     }
-    let vs = value.item.sources;
+    let sources = value.item.sources;
     if (sources) {
       frag.querySelector(".search_sources").textContent = sources;
     } else {
       frag.querySelector(".search_ifsources").remove();
     }
-    let vs = value.item.subjects;
+    let subjects = value.item.subjects;
     if (subjects) {
       frag.querySelector(".search_subjects").textContent = subjects;
     } else {
